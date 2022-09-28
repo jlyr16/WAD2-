@@ -18,7 +18,6 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue';
-import snake from './components/snake.js';
 
 export default {
   name: 'App',
