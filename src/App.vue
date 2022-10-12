@@ -2,9 +2,10 @@
   <div id="app">
     <img
       alt="Vue logo"
-      src="https://cdn-icons-png.flaticon.com/512/3136/3136101.png"
+      src="https://cdn-icons-png.flaticon.com/512/7564/7564629.png"
     />
     <HelloWorld msg="hello!!!!!!" />
+    <glucoseGraph msg="hello" />
   </div>
 </template>
 
@@ -21,11 +22,13 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue';
+import glucoseGraph from './components/glucoseGraph.vue';
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
+    glucoseGraph,
   },
 };
 </script>
