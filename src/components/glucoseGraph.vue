@@ -1,14 +1,31 @@
 <template>
-  <div class="hello">
-    <h2>{{ msg }}</h2>
+  <div class="chart">
+    <line-chart :data="chartData" :options="chartOptions" />
+  </div>
+
   
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String,
+  name: 'glucoseGraph',
+  data() {
+    return {
+      chartData: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [
+          {
+            label: 'Data One',
+            backgroundColor: '#f87979',
+            data: [40, 39, 10, 40, 39, 80, 40],
+          },
+        ],
+      },
+      chartOptions: {
+        responsive: true,
+        maintainAspectRatio: false,
+      },
+    };
   },
 };
 </script>
