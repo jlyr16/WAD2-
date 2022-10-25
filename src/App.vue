@@ -12,7 +12,7 @@
 
  
 
-  <postcomponent />
+  <!-- <postcomponent /> -->
   <glucoseGraph />
 </template>
 

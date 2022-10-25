@@ -2,6 +2,15 @@
   <div class="chart">
     <canvas id="myChart" width="400" height="400"></canvas>
   </div>
+
+  <div class="input">
+    <input id="pushvalue" type="number" value="10" class="form-control mb-3" />
+
+    <input id="pushlabel" type="text" value="10" class="form-control mb-3" />
+
+    <button id="push" class="btn btn-dark btn-sm w-100" @click="addData">Push Value</button>
+  </div>
+
 </template>
 
 <style>
@@ -51,6 +60,8 @@ export default {
               'rgba(255, 159, 64, 1)',
             ],
             borderWidth: 1,
+            showLine: true,
+            spanGaps: true
           },
         ],
       },
@@ -73,11 +84,44 @@ export default {
     };
   },
   methods: {
-    addData() {
-      console.log(this.input);
-    },
+     addData() {
+      const value = document.getElementById('pushvalue').value;
+      const label = document.getElementById('pushlabel').value;
+       myChart.data.labels.push(label);
+       myChart.data.datasets[0].data.push(value);
+       myChart.update();
+     }
   },
 };
+
+
+
+// const push = document.getElementById("push");
+
+
+//   //get the value and label from the input fields
+//   const value = document.getElementById('pushvalue').value;
+//   const label = document.getElementById('pushlabel').value;
+//   //push the value and label to the chart
+
+//   myChart.data.labels.push(label);
+//   myChart.data.datasets[0].data.push(value);
+//   //update the chart
+//   myChart.update();
+// });
+
+
+
+// push.addEventListener('click', pushValueChart);
+
+// function pushValueChart(){
+// const pushValue = document.getElementById('pushvalue');
+// const pushLabel = document.getElementById('pushlabel');
+// myChart.data.datasets[0].data.push(pushValue.value);
+// myChart.data.labels.push(pushlabel.value);
+// myChart.update();
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
