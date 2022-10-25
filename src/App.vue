@@ -4,6 +4,10 @@
     
   </div>
 
+  <form @submit="addData" method="post">
+      <input type="text" v-model="input" placeholder="Enter glucose level" />
+      <button type="submit">Submit</button>
+    </form>
     <glucoseGraph />
 </template>
 
