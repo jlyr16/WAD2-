@@ -87,9 +87,9 @@ export default {
      addData() {
       const value = document.getElementById('pushvalue').value;
       const label = document.getElementById('pushlabel').value;
-       myChart.data.labels.push(label);
-       myChart.data.datasets[0].data.push(value);
-       myChart.update();
+      myChart.data.labels.push("test");
+      //  myChart.data.datasets[0].data.push(value);
+      //  myChart.update();
      }
   },
 };
