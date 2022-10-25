@@ -15,15 +15,14 @@ name: "PostComponent",
 data(){
 return {
 posts: {
-title:null,
-author:null
+input: []
 }
 }
 },
 methods: {
 postData(e)
 {
-this.axios.post("http://localhost:3000/posts", this.posts)
+this.axios.post("", this.posts)
 .then(result => {
 console.warn()
 })
