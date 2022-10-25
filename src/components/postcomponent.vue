@@ -7,9 +7,8 @@
     </div>
 </template>
 <script>
-import Vue from 'vue' 
+import axios from 'axios'
 
-Vue.use(VueAxios, axios)
 
 export default {
 name: "PostComponent",

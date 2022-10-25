@@ -8,14 +8,15 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.6",
-    "bootstrap": "^5.2.2",
-    "bootstrap-vue": "^2.23.0",
-    "chart.js": "^3.9.1",
-    "debug": "^4.3.4",
-    "events": "^3.3.0",
-    "vue": "^3.2.41",
-    "zlib": "^1.0.5"
+    "@popperjs/core": "2.11.6",
+    "axios": ">=1.0.0",
+    "bootstrap": "5.2.2",
+    "bootstrap-vue": "2.23.0",
+    "chart.js": "3.9.1",
+    "debug": "4.3.4",
+    "events": "3.3.0",
+    "vue": "3.2.41",
+    "vue-axios": "^3.5.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.4.0",
