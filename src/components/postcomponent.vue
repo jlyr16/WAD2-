@@ -1,9 +1,14 @@
 <template>
-
+ <div class="form">
+        <form @submit="addData" method="post">
+            <input type="text" v-model="input" placeholder="Enter glucose level">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</template>
 <script>
 import Vue from 'vue' 
-import axios from 'axios'
-import VueAxios from 'vue-axios'
+
 Vue.use(VueAxios, axios)
 
 export default {
