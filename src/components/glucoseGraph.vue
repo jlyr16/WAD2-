@@ -4,6 +4,17 @@
   </div>
 </template>
 
+<style>
+.chart {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+
 <script>
 import Chart from 'chart.js';
 
@@ -43,8 +54,28 @@ export default {
           },
         ],
       },
+      options: {
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+              },
+            },
+          ],
+        },
+      },
     });
-    myChart;
+  },
+  data() {
+    return {
+      input: '',
+    };
+  },
+  methods: {
+    addData() {
+      console.log(this.input);
+    },
   },
 };
 </script>
