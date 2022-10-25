@@ -1,16 +1,22 @@
 <template>
   <div id="app">
-    <img src="https://cdn-icons-png.flaticon.com/512/6723/6723392.png " width="200" height="200" alt="logo">
-    
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/6723/6723392.png "
+      width="200"
+      height="200"
+      alt="logo"
+    />
   </div>
 
   DiaBEATes
 
   <form @submit="addData" method="post">
-      <input type="text" v-model="input" placeholder="Enter glucose level" />
-      <button type="submit">Submit</button>
-    </form>
-    <glucoseGraph />
+    <input type="text" v-model="input" placeholder="Enter glucose level" />
+    <button type="submit">Submit</button>
+  </form>
+
+  <postcomponent />
+  <glucoseGraph />
 </template>
 
 <style>
@@ -27,13 +33,14 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue';
 import glucoseGraph from './components/glucoseGraph.vue';
+import postcomponent from './components/postcomponent.vue';
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
     glucoseGraph,
+    postcomponent,
   },
 };
-
 </script>
