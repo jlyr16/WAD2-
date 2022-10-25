@@ -1,12 +1,7 @@
 <template>
   <div id="app">
     <img src="https://cdn-icons-png.flaticon.com/512/6723/6723392.png " width="200" height="200" alt="logo">
-    <v-if v-if="!isAuthenticated">
-      <v-button @click="login">Login</v-button>
-    </v-if>
-    <v-else>
-      <v-button @click="logout">Logout</v-button>
-    </v-else>
+    
   </div>
 
     <glucoseGraph />
