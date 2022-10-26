@@ -25,7 +25,11 @@
 </style>
 
 <script>
+
 import Chart from 'chart.js';
+
+const xlabels=[];
+const ydata=[];
 
 export default {
   name: 'glucoseGraph',
@@ -33,16 +37,19 @@ export default {
     msg: String,
   },
   mounted() {
+
+    
     const ctx = document.getElementById('myChart');
 
+    
     const myChart = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'May', 'Fri', 'Sat', 'Sun'],
+        labels: xlabels,
         datasets: [
           {
             label: 'Glucose Level',
-            data: [12, 19, 3, 5, 2, 3, 69, 199],
+            data: ydata,
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
               'rgba(54, 162, 235, 0.2)',
@@ -78,21 +85,29 @@ export default {
       },
     });
   },
+
   data() {
     return {
-      input: '',
+      xlabels:0,
+      ydata:0,
     };
   },
   methods: {
-     addData() {
+
+  
+      addData() {
       const value = document.getElementById('pushvalue').value;
       const label = document.getElementById('pushlabel').value;
-      myChart.data.labels.push("test");
-      //  myChart.data.datasets[0].data.push(value);
-      //  myChart.update();
-     }
+      xlabels.push(label)
+      ydata.push(value)
+
+     },
+
   },
 };
+
+
+</script>
 
 
 
