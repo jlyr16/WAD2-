@@ -88,8 +88,8 @@ export default {
 
   data() {
     return {
-      xlabels:0,
-      ydata:0,
+      xlabels:[],
+      ydata:[],
     };
   },
   methods: {
@@ -98,8 +98,11 @@ export default {
       addData() {
       const value = document.getElementById('pushvalue').value;
       const label = document.getElementById('pushlabel').value;
-      xlabels.push(label)
-      ydata.push(value)
+        // this.xlabels.push(label)
+      this.ydata.push(value)
+      this.xlabels.push(label)
+      
+
 
      },
 
